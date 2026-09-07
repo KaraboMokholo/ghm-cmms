@@ -1,0 +1,794 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "admin@ghm.local",
+      "password": "e5aaa488660edf731fb2cf8b40580f3e46144d213683689d0d20a25f55fdcfff",
+      "name": "Admin Karabo",
+      "role": "admin",
+      "branch_id": 1,
+      "active": 1,
+      "created_at": "2026-09-05T16:53:04.143Z"
+    },
+    {
+      "id": 2,
+      "email": "store@ghm.local",
+      "password": "ee0a1aa680a9d05c2ef32ca8a1c204daea70e0fa1ff62cb5f5b666c6de2089db",
+      "name": "Main Storeman",
+      "role": "store",
+      "branch_id": 1,
+      "active": 1,
+      "created_at": "2026-09-05T16:53:04.143Z"
+    },
+    {
+      "id": 3,
+      "email": "cpt@ghm.local",
+      "password": "50798dd37a6d60fb3bc177c319ce498dd4b616d9021d9f70449a8b0ab24d3687",
+      "name": "CPT Branch User",
+      "role": "branch",
+      "branch_id": 2,
+      "active": 1,
+      "created_at": "2026-09-05T16:53:04.143Z"
+    }
+  ],
+  "login_logs": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "action": "LOGIN",
+      "at": "2026-09-07T04:15:31.785Z",
+      "email": "admin@ghm.local"
+    }
+  ],
+  "sessions": [
+    {
+      "id": 1,
+      "token": "d9992c3fa025f6c7b8ea60d4efea99367279c5742b0bd506",
+      "user_id": 1,
+      "created_at": "2026-09-07T04:15:31.783Z",
+      "last_seen": "2026-09-07T04:16:47.981Z"
+    }
+  ],
+  "branches": [
+    {
+      "id": 1,
+      "code": "MAIN",
+      "name": "Main Branch (Head Office)",
+      "is_main": true,
+      "address": "Johannesburg",
+      "phone": "011-000-0001",
+      "active": 1
+    },
+    {
+      "id": 2,
+      "code": "CPT",
+      "name": "Cape Town Depot",
+      "is_main": false,
+      "address": "Bellville",
+      "phone": "021-000-0002",
+      "active": 1
+    },
+    {
+      "id": 3,
+      "code": "DBN",
+      "name": "Durban Depot",
+      "is_main": false,
+      "address": "Pinetown",
+      "phone": "031-000-0003",
+      "active": 1
+    },
+    {
+      "id": 4,
+      "code": "PLK",
+      "name": "Polokwane Depot",
+      "is_main": false,
+      "address": "Polokwane",
+      "phone": "015-000-0004",
+      "active": 1
+    }
+  ],
+  "suppliers": [
+    {
+      "id": 1,
+      "name": "Bearing World SA",
+      "contact_person": "Thabo Molefe",
+      "email": "thabo@bearingworld.co.za",
+      "phone": "011-555-0101"
+    },
+    {
+      "id": 2,
+      "name": "Industrial Belts Ltd",
+      "contact_person": "Sarah Naidoo",
+      "email": "sarah@indbelts.co.za",
+      "phone": "021-555-0202"
+    },
+    {
+      "id": 3,
+      "name": "Hydraulics Direct",
+      "contact_person": "Johan van Wyk",
+      "email": "johan@hydraulics.co.za",
+      "phone": "031-555-0303"
+    },
+    {
+      "id": 4,
+      "name": "Caterpillar Parts SA",
+      "contact_person": "Mike Botha",
+      "email": "mike@catparts.co.za",
+      "phone": "011-555-0404"
+    }
+  ],
+  "parts": [
+    {
+      "id": 1,
+      "part_number": "BRG-6205-2RS",
+      "description": "Deep Groove Ball Bearing 6205-2RS",
+      "category": "Bearings",
+      "unit": "EA",
+      "unit_cost": 85.5,
+      "supplier_id": 1,
+      "min_stock": 20,
+      "max_stock": 100,
+      "safety_stock": 10,
+      "status": "Active",
+      "reclass_status": "Standard"
+    },
+    {
+      "id": 2,
+      "part_number": "BLT-A38",
+      "description": "V-Belt A38",
+      "category": "Belts",
+      "unit": "EA",
+      "unit_cost": 125,
+      "supplier_id": 2,
+      "min_stock": 15,
+      "max_stock": 50,
+      "safety_stock": 5,
+      "status": "Active",
+      "reclass_status": "Standard"
+    },
+    {
+      "id": 3,
+      "part_number": "HYD-HOSE-1/2",
+      "description": "Hydraulic Hose 1/2\" x 2m",
+      "category": "Hydraulics",
+      "unit": "EA",
+      "unit_cost": 450,
+      "supplier_id": 3,
+      "min_stock": 5,
+      "max_stock": 30,
+      "safety_stock": 3,
+      "status": "Active",
+      "reclass_status": "Standard"
+    },
+    {
+      "id": 4,
+      "part_number": "FIL-OIL-10W40",
+      "description": "Engine Oil Filter",
+      "category": "Filters",
+      "unit": "EA",
+      "unit_cost": 95,
+      "supplier_id": 1,
+      "min_stock": 10,
+      "max_stock": 60,
+      "safety_stock": 5,
+      "status": "Active",
+      "reclass_status": "Standard"
+    },
+    {
+      "id": 5,
+      "part_number": "SEAL-NBR-50",
+      "description": "NBR Oil Seal 50x70x10",
+      "category": "Seals",
+      "unit": "EA",
+      "unit_cost": 35,
+      "supplier_id": 1,
+      "min_stock": 15,
+      "max_stock": 80,
+      "safety_stock": 8,
+      "status": "Active",
+      "reclass_status": "Standard"
+    },
+    {
+      "id": 6,
+      "part_number": "MOTOR-3PH-5.5",
+      "description": "3-Phase Motor 5.5kW",
+      "category": "Motors",
+      "unit": "EA",
+      "unit_cost": 8500,
+      "supplier_id": 3,
+      "min_stock": 1,
+      "max_stock": 5,
+      "safety_stock": 1,
+      "status": "Active",
+      "reclass_status": "Capital"
+    },
+    {
+      "id": 7,
+      "part_number": "CHAIN-40-1R",
+      "description": "Roller Chain #40",
+      "category": "Chains",
+      "unit": "M",
+      "unit_cost": 280,
+      "supplier_id": 2,
+      "min_stock": 10,
+      "max_stock": 40,
+      "safety_stock": 5,
+      "status": "Active",
+      "reclass_status": "Standard"
+    },
+    {
+      "id": 8,
+      "part_number": "GREASE-NLGI2",
+      "description": "Lithium Grease NLGI 2 - 400g",
+      "category": "Lubricants",
+      "unit": "EA",
+      "unit_cost": 65,
+      "supplier_id": 1,
+      "min_stock": 20,
+      "max_stock": 100,
+      "safety_stock": 10,
+      "status": "Active",
+      "reclass_status": "Standard"
+    },
+    {
+      "id": 9,
+      "part_number": "CAT-FILTER-1R",
+      "description": "Cat Oil Filter 1R-0739",
+      "category": "Filters",
+      "unit": "EA",
+      "unit_cost": 320,
+      "supplier_id": 4,
+      "min_stock": 8,
+      "max_stock": 40,
+      "safety_stock": 4,
+      "status": "Active",
+      "reclass_status": "Standard"
+    },
+    {
+      "id": 10,
+      "part_number": "CAT-BUCKET-PIN",
+      "description": "Wheel Loader Bucket Pin Kit",
+      "category": "Undercarriage",
+      "unit": "KIT",
+      "unit_cost": 1850,
+      "supplier_id": 4,
+      "min_stock": 2,
+      "max_stock": 10,
+      "safety_stock": 1,
+      "status": "Active",
+      "reclass_status": "Standard"
+    },
+    {
+      "id": 11,
+      "part_number": "OIL-15W40-20L",
+      "description": "Engine Oil 15W40 20L",
+      "category": "Lubricants",
+      "unit": "EA",
+      "unit_cost": 890,
+      "supplier_id": 1,
+      "min_stock": 5,
+      "max_stock": 30,
+      "safety_stock": 3,
+      "status": "Active",
+      "reclass_status": "Standard"
+    },
+    {
+      "id": 12,
+      "part_number": "AIR-FILTER-WL",
+      "description": "Wheel Loader Air Filter",
+      "category": "Filters",
+      "unit": "EA",
+      "unit_cost": 450,
+      "supplier_id": 4,
+      "min_stock": 4,
+      "max_stock": 20,
+      "safety_stock": 2,
+      "status": "Active",
+      "reclass_status": "Standard"
+    }
+  ],
+  "branch_stock": [
+    {
+      "id": 1,
+      "branch_id": 1,
+      "part_id": 1,
+      "quantity": 45,
+      "bin_location": "A-01-03",
+      "stock_on_order": 0,
+      "status": "Available"
+    },
+    {
+      "id": 2,
+      "branch_id": 1,
+      "part_id": 2,
+      "quantity": 12,
+      "bin_location": "B-02-01",
+      "stock_on_order": 0,
+      "status": "Available"
+    },
+    {
+      "id": 3,
+      "branch_id": 1,
+      "part_id": 3,
+      "quantity": 8,
+      "bin_location": "C-03-05",
+      "stock_on_order": 0,
+      "status": "Available"
+    },
+    {
+      "id": 4,
+      "branch_id": 1,
+      "part_id": 4,
+      "quantity": 30,
+      "bin_location": "D-01-02",
+      "stock_on_order": 0,
+      "status": "Available"
+    },
+    {
+      "id": 5,
+      "branch_id": 1,
+      "part_id": 5,
+      "quantity": 25,
+      "bin_location": "A-02-08",
+      "stock_on_order": 0,
+      "status": "Available"
+    },
+    {
+      "id": 6,
+      "branch_id": 1,
+      "part_id": 6,
+      "quantity": 2,
+      "bin_location": "E-01-01",
+      "stock_on_order": 0,
+      "status": "Available"
+    },
+    {
+      "id": 7,
+      "branch_id": 1,
+      "part_id": 7,
+      "quantity": 15,
+      "bin_location": "B-03-04",
+      "stock_on_order": 0,
+      "status": "Available"
+    },
+    {
+      "id": 8,
+      "branch_id": 1,
+      "part_id": 8,
+      "quantity": 40,
+      "bin_location": "D-02-01",
+      "stock_on_order": 0,
+      "status": "Available"
+    },
+    {
+      "id": 9,
+      "branch_id": 1,
+      "part_id": 9,
+      "quantity": 18,
+      "bin_location": "F-01-01",
+      "stock_on_order": 0,
+      "status": "Available"
+    },
+    {
+      "id": 10,
+      "branch_id": 1,
+      "part_id": 10,
+      "quantity": 4,
+      "bin_location": "F-02-01",
+      "stock_on_order": 0,
+      "status": "Available"
+    },
+    {
+      "id": 11,
+      "branch_id": 1,
+      "part_id": 11,
+      "quantity": 10,
+      "bin_location": "D-03-01",
+      "stock_on_order": 0,
+      "status": "Available"
+    },
+    {
+      "id": 12,
+      "branch_id": 1,
+      "part_id": 12,
+      "quantity": 6,
+      "bin_location": "F-03-01",
+      "stock_on_order": 0,
+      "status": "Available"
+    },
+    {
+      "id": 13,
+      "branch_id": 2,
+      "part_id": 1,
+      "quantity": 10,
+      "bin_location": "A-01",
+      "stock_on_order": 0,
+      "status": "Available"
+    },
+    {
+      "id": 14,
+      "branch_id": 2,
+      "part_id": 2,
+      "quantity": 3,
+      "bin_location": "B-01",
+      "stock_on_order": 0,
+      "status": "Available"
+    },
+    {
+      "id": 15,
+      "branch_id": 2,
+      "part_id": 4,
+      "quantity": 8,
+      "bin_location": "D-01",
+      "stock_on_order": 0,
+      "status": "Available"
+    },
+    {
+      "id": 16,
+      "branch_id": 2,
+      "part_id": 8,
+      "quantity": 12,
+      "bin_location": "D-02",
+      "stock_on_order": 0,
+      "status": "Available"
+    },
+    {
+      "id": 17,
+      "branch_id": 2,
+      "part_id": 9,
+      "quantity": 5,
+      "bin_location": "F-01",
+      "stock_on_order": 0,
+      "status": "Available"
+    },
+    {
+      "id": 18,
+      "branch_id": 3,
+      "part_id": 1,
+      "quantity": 6,
+      "bin_location": "A-01",
+      "stock_on_order": 0,
+      "status": "Available"
+    },
+    {
+      "id": 19,
+      "branch_id": 3,
+      "part_id": 3,
+      "quantity": 2,
+      "bin_location": "C-01",
+      "stock_on_order": 0,
+      "status": "Available"
+    },
+    {
+      "id": 20,
+      "branch_id": 3,
+      "part_id": 4,
+      "quantity": 4,
+      "bin_location": "D-01",
+      "stock_on_order": 0,
+      "status": "Available"
+    },
+    {
+      "id": 21,
+      "branch_id": 3,
+      "part_id": 9,
+      "quantity": 3,
+      "bin_location": "F-01",
+      "stock_on_order": 0,
+      "status": "Available"
+    },
+    {
+      "id": 22,
+      "branch_id": 3,
+      "part_id": 10,
+      "quantity": 1,
+      "bin_location": "F-02",
+      "stock_on_order": 0,
+      "status": "Available"
+    },
+    {
+      "id": 23,
+      "branch_id": 4,
+      "part_id": 1,
+      "quantity": 4,
+      "bin_location": "A-01",
+      "stock_on_order": 0,
+      "status": "Available"
+    },
+    {
+      "id": 24,
+      "branch_id": 4,
+      "part_id": 2,
+      "quantity": 2,
+      "bin_location": "B-01",
+      "stock_on_order": 0,
+      "status": "Available"
+    },
+    {
+      "id": 25,
+      "branch_id": 4,
+      "part_id": 8,
+      "quantity": 6,
+      "bin_location": "D-01",
+      "stock_on_order": 0,
+      "status": "Available"
+    },
+    {
+      "id": 26,
+      "branch_id": 4,
+      "part_id": 9,
+      "quantity": 2,
+      "bin_location": "F-01",
+      "stock_on_order": 0,
+      "status": "Available"
+    }
+  ],
+  "stock_movements": [],
+  "purchase_orders": [],
+  "po_items": [],
+  "technicians": [
+    {
+      "id": 1,
+      "name": "Pieter Botha",
+      "employee_code": "TECH-001",
+      "branch_id": 1,
+      "phone": "082-111-2222",
+      "skill_level": "Senior",
+      "active": 1
+    },
+    {
+      "id": 2,
+      "name": "Lerato Dlamini",
+      "employee_code": "TECH-002",
+      "branch_id": 1,
+      "phone": "083-333-4444",
+      "skill_level": "Intermediate",
+      "active": 1
+    },
+    {
+      "id": 3,
+      "name": "Ahmed Hassan",
+      "employee_code": "TECH-003",
+      "branch_id": 2,
+      "phone": "084-555-6666",
+      "skill_level": "Junior",
+      "active": 1
+    }
+  ],
+  "job_cards": [
+    {
+      "id": 1,
+      "job_number": "JC-2026-001",
+      "title": "500hr Service – WL-001",
+      "description": "Scheduled 500 hour service",
+      "asset_id": 1,
+      "service_type_id": 1,
+      "bom_id": 1,
+      "branch_id": 1,
+      "priority": "High",
+      "status": "ASSIGNED",
+      "technician_id": 1,
+      "scheduled_date": "2026-09-10",
+      "completed_date": null,
+      "estimated_hours": 6,
+      "actual_hours": null,
+      "created_by": "Admin",
+      "created_at": "2026-09-05T16:53:04.144Z",
+      "updated_at": "2026-09-05T16:53:04.144Z"
+    },
+    {
+      "id": 2,
+      "job_number": "JC-2026-002",
+      "title": "Bucket pin replacement",
+      "description": "Worn bucket pins",
+      "asset_id": 2,
+      "service_type_id": null,
+      "bom_id": null,
+      "branch_id": 2,
+      "priority": "Critical",
+      "status": "OPEN",
+      "technician_id": null,
+      "scheduled_date": "2026-09-08",
+      "completed_date": null,
+      "estimated_hours": 4,
+      "actual_hours": null,
+      "created_by": "Admin",
+      "created_at": "2026-09-05T16:53:04.144Z",
+      "updated_at": "2026-09-05T16:53:04.144Z"
+    }
+  ],
+  "job_parts": [],
+  "service_types": [
+    {
+      "id": 1,
+      "code": "SVC-500HR-WL",
+      "name": "500 Hour Service – Wheel Loader",
+      "asset_type": "Wheel Loader",
+      "interval_hours": 500,
+      "interval_days": null,
+      "checklist": "Engine oil & filter, Fuel filter, Air filter, Grease, Hydraulics, Bucket pins, Tyres"
+    },
+    {
+      "id": 2,
+      "code": "SVC-1000HR-WL",
+      "name": "1000 Hour Service – Wheel Loader",
+      "asset_type": "Wheel Loader",
+      "interval_hours": 1000,
+      "interval_days": null,
+      "checklist": "Full 500hr + Transmission oil, Hydraulic sample, Coolant, Brakes"
+    },
+    {
+      "id": 3,
+      "code": "SVC-250HR-EX",
+      "name": "250 Hour Service – Excavator",
+      "asset_type": "Excavator",
+      "interval_hours": 250,
+      "interval_days": null,
+      "checklist": "Engine oil & filter, Grease boom, Track tension, Hydraulics"
+    }
+  ],
+  "assets": [
+    {
+      "id": 1,
+      "code": "WL-001",
+      "name": "CAT 950M Wheel Loader",
+      "asset_type": "Wheel Loader",
+      "branch_id": 1,
+      "hour_meter": 4850,
+      "last_service_hours": 4500,
+      "status": "Operational"
+    },
+    {
+      "id": 2,
+      "code": "WL-002",
+      "name": "CAT 966M Wheel Loader",
+      "asset_type": "Wheel Loader",
+      "branch_id": 2,
+      "hour_meter": 2100,
+      "last_service_hours": 2000,
+      "status": "Operational"
+    },
+    {
+      "id": 3,
+      "code": "EX-001",
+      "name": "CAT 320 Excavator",
+      "asset_type": "Excavator",
+      "branch_id": 1,
+      "hour_meter": 3200,
+      "last_service_hours": 3000,
+      "status": "Operational"
+    }
+  ],
+  "part_requests": [],
+  "invoices": [],
+  "invoice_items": [],
+  "supplier_orders": [],
+  "supplier_order_items": [],
+  "boms": [
+    {
+      "id": 1,
+      "code": "BOM-500HR-WL",
+      "name": "500hr Wheel Loader Service Kit",
+      "service_type_id": 1,
+      "notes": "Standard 500 hour kit",
+      "active": 1
+    },
+    {
+      "id": 2,
+      "code": "BOM-1000HR-WL",
+      "name": "1000hr Wheel Loader Service Kit",
+      "service_type_id": 2,
+      "notes": "Includes 500hr items + extras",
+      "active": 1
+    },
+    {
+      "id": 3,
+      "code": "BOM-250HR-EX",
+      "name": "250hr Excavator Service Kit",
+      "service_type_id": 3,
+      "notes": "",
+      "active": 1
+    }
+  ],
+  "bom_items": [
+    {
+      "id": 1,
+      "bom_id": 1,
+      "part_id": 11,
+      "quantity": 1
+    },
+    {
+      "id": 2,
+      "bom_id": 1,
+      "part_id": 9,
+      "quantity": 1
+    },
+    {
+      "id": 3,
+      "bom_id": 1,
+      "part_id": 12,
+      "quantity": 1
+    },
+    {
+      "id": 4,
+      "bom_id": 1,
+      "part_id": 8,
+      "quantity": 4
+    },
+    {
+      "id": 5,
+      "bom_id": 2,
+      "part_id": 11,
+      "quantity": 1
+    },
+    {
+      "id": 6,
+      "bom_id": 2,
+      "part_id": 9,
+      "quantity": 1
+    },
+    {
+      "id": 7,
+      "bom_id": 2,
+      "part_id": 12,
+      "quantity": 1
+    },
+    {
+      "id": 8,
+      "bom_id": 2,
+      "part_id": 8,
+      "quantity": 6
+    },
+    {
+      "id": 9,
+      "bom_id": 2,
+      "part_id": 4,
+      "quantity": 2
+    },
+    {
+      "id": 10,
+      "bom_id": 3,
+      "part_id": 11,
+      "quantity": 1
+    },
+    {
+      "id": 11,
+      "bom_id": 3,
+      "part_id": 9,
+      "quantity": 1
+    },
+    {
+      "id": 12,
+      "bom_id": 3,
+      "part_id": 8,
+      "quantity": 3
+    }
+  ],
+  "_meta": {
+    "nextId": {
+      "users": 4,
+      "login_logs": 2,
+      "sessions": 2,
+      "branches": 5,
+      "suppliers": 5,
+      "parts": 13,
+      "branch_stock": 27,
+      "stock_movements": 1,
+      "purchase_orders": 1,
+      "po_items": 1,
+      "technicians": 4,
+      "job_cards": 3,
+      "job_parts": 1,
+      "service_types": 4,
+      "assets": 4,
+      "part_requests": 1,
+      "invoices": 1,
+      "invoice_items": 1,
+      "supplier_orders": 1,
+      "supplier_order_items": 1,
+      "boms": 4,
+      "bom_items": 13
+    },
+    "transferSeq": 1000
+  }
+}

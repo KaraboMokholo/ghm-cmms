@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GHM WMS / CMMS</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <!-- Login screen -->
+  <div id="login-screen" class="login-screen">
+    <div class="login-box">
+      <h1>GHM</h1>
+      <p class="login-sub">WMS / CMMS</p>
+      <form id="login-form">
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="login-email" required placeholder="admin@ghm.local" value="admin@ghm.local" />
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="login-password" required placeholder="••••••••" value="admin123" />
+        </div>
+        <p id="login-error" class="login-error"></p>
+        <button type="submit" class="btn" style="width:100%">Sign in</button>
+      </form>
+      <p class="login-hint">Demo: admin@ghm.local / admin123</p>
+    </div>
+  </div>
+
+  <div id="app-shell" class="hidden">
+    <div id="sidebar-overlay" class="sidebar-overlay" onclick="closeSidebar()"></div>
+    <aside class="sidebar" id="sidebar">
+      <div class="logo">
+        <h1>GHM</h1>
+        <span>WMS / CMMS</span>
+      </div>
+      <nav>
+        <button class="nav-btn active" data-view="dashboard">Dashboard</button>
+        <button class="nav-btn" data-view="inventory">Inventory</button>
+        <button class="nav-btn" data-view="branches">Branches</button>
+        <button class="nav-btn" data-view="requests">Branch Requests</button>
+        <button class="nav-btn" data-view="movements">Movements</button>
+        <button class="nav-btn" data-view="boms">Service Kits (BOM)</button>
+        <button class="nav-btn" data-view="jobs">Job Cards</button>
+        <button class="nav-btn" data-view="reports">Reports</button>
+        <button class="nav-btn" data-view="forecast">Forecast</button>
+        <button class="nav-btn" data-view="orders">Order Lists</button>
+        <button class="nav-btn" data-view="purchase">Purchase Orders</button>
+        <button class="nav-btn" data-view="invoices">Invoices</button>
+        <button class="nav-btn" data-view="services">Service Types</button>
+        <button class="nav-btn" data-view="assets">Assets</button>
+        <button class="nav-btn" data-view="suppliers">Suppliers</button>
+        <button class="nav-btn" data-view="audit">Login Audit</button>
+      </nav>
+      <div class="sidebar-footer">
+        <div id="user-label" style="margin-bottom:0.4rem;color:#ccc;font-size:0.75rem"></div>
+        <button class="nav-btn" onclick="doLogout()" style="color:#aaa">Sign out</button>
+      </div>
+    </aside>
+
+    <main class="content">
+      <header class="topbar">
+        <div style="display:flex;align-items:center">
+          <button class="menu-toggle" onclick="toggleSidebar()" aria-label="Menu">☰</button>
+          <h2 id="page-title">Dashboard</h2>
+        </div>
+        <div class="topbar-actions" id="topbar-actions"></div>
+      </header>
+      <div id="view-container"></div>
+    </main>
+  </div>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modal-title">Modal</h3>
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+      </div>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <div class="watermark">Made by Karabo</div>
+  <script src="/js/app.js"></script>
+</body>
+</html>
