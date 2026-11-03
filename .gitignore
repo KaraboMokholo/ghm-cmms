@@ -1,0 +1,8 @@
+
+uploads/**
+!uploads/.gitkeep
+!uploads/tools/
+!uploads/tools/.gitkeep
+node_modules/
+db/backups/
+db/ghm-data.json.tmp
